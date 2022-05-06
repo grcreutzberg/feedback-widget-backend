@@ -40,7 +40,9 @@ export class SubmitFeedback {
                 `<h1>New feedback from Feedget</h1>`,
                 `<p>Type: ${type}</p>`,
                 `<p>Comment: ${comment}</p>`,
-                `<p>Screenshot: ${screenshot}</p>`,
+                `<div style="width:480px; height:654px;">`,
+                `${screenshot ? `<img src="${screenshot}" />` : ''}`,
+                `</div>`,
                 `</div>`
             ].join('\n')
         })
